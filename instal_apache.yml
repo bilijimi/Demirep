@@ -6,3 +6,6 @@
   - name: Install the apache2 package
     apt:
       name: apache2
+
+  - name: Create vm
+    
