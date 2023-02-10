@@ -3,11 +3,12 @@
   become: true
   tasks:
 
-  - name: Install the apache2 package..
+  - name: Install the apache2 package
     apt:
       name: apache2
+      state: latest
 
-  - name: update repository index
+  - name: add php support for apache
     apt:
-      update_cache:yes
-    
+      name: libapache2-mod-php
+      state: latest
